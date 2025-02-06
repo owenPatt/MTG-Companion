@@ -1,0 +1,106 @@
+/* General Player Stats Container */
+.player-stats {
+  background: linear-gradient(135deg, #7b0000, #ff0000);
+  max-width: 99vw;
+  border: 3px solid #ff5555;
+  padding: 16px;
+  border-radius: 12px;
+  height: 90vh;
+  width: 90vw;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(255, 85, 85, 0.7);
+}
+
+/* Player Name */
+.player-name {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px black;
+}
+
+/* HP Bar Container */
+.hp-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* HP Bar */
+.hp-bar {
+  flex-grow: 1;
+  height: 30vh;
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #ffaaaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hp-fill {
+  height: 100%;
+  background: linear-gradient(to right, #ff5555, #ff0000);
+  transition: width 0.3s ease-in-out;
+}
+
+.hp-display {
+  font-size: 80px;
+  margin: 0px 15px;
+}
+
+.hp-plus {
+  flex-grow: 1;
+  height: 28vh;
+}
+
+.hp-minus {
+  flex-grow: 1;
+  height: 28vh;
+}
+
+/* Counter Section */
+.counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 85, 85, 0.3);
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 0 5px rgba(255, 85, 85, 0.5);
+}
+
+/* Counter Title */
+.counter-title {
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+/* Counter Buttons */
+.counter button {
+  background: #ff5555;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.counter button:hover {
+  background: #ff2222;
+  transform: scale(1.1);
+}
+
+/* Counter Number */
+.counter-value {
+  width: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
