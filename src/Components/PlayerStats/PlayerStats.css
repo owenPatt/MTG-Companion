@@ -1,12 +1,10 @@
 /* General Player Stats Container */
 .player-stats {
   background: linear-gradient(135deg, #7b0000, #ff0000);
-  max-width: 99vw;
+  width: 92vw;
   border: 3px solid #ff5555;
   padding: 16px;
   border-radius: 12px;
-  height: 90vh;
-  width: 90vw;
   text-align: center;
   color: white;
   box-shadow: 0px 0px 10px rgba(255, 85, 85, 0.7);
@@ -47,8 +45,20 @@
   transition: width 0.3s ease-in-out;
 }
 
+.hp-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hp-title {
+  font-size: 25px;
+  margin: 5px;
+}
+
 .hp-display {
   font-size: 80px;
+  line-height: 1.1;
   margin: 0px 15px;
 }
 
@@ -62,22 +72,27 @@
   height: 28vh;
 }
 
+.player-numbers {
+  display: flex;
+  justify-content: center;
+}
+
+.counters {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 46vw;
+}
+
 /* Counter Section */
 .counter {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background: rgba(255, 85, 85, 0.3);
   padding: 8px;
   border-radius: 8px;
   margin-bottom: 8px;
   box-shadow: 0 0 5px rgba(255, 85, 85, 0.5);
-}
-
-/* Counter Title */
-.counter-title {
-  font-size: 16px;
-  flex-grow: 1;
 }
 
 /* Counter Buttons */

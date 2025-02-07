@@ -23,43 +23,62 @@ function PlayerStats() {
         <button className="hp-plus" onClick={() => handleHpChange(-1)}>
           -
         </button>
-        <span className="hp-display">{hp}</span>
+        <div className="hp-info">
+          <span className="hp-title">HP</span>
+          <span className="hp-display">{hp}</span>
+        </div>
         <button className="hp-minus" onClick={() => handleHpChange(1)}>
           +
         </button>
       </div>
-      <div className="counters">
-        <div className="counter">
-          <span>Experience: {experience}</span>
-          <button
-            className="counter-plus"
-            onClick={() => setExperience((prev) => prev + 1)}>
-            +
-          </button>
-          <button
-            className="counter-minus"
-            onClick={() => setExperience((prev) => Math.max(0, prev - 1))}>
-            -
-          </button>
+      <div className="player-numbers">
+        <div className="counters">
+          <div className="counter">
+            <button
+              className="counter-plus"
+              onClick={() => setExperience((prev) => prev + 1)}>
+              +
+            </button>
+            <span>Experience {experience}</span>
+            <button
+              className="counter-minus"
+              onClick={() => setExperience((prev) => Math.max(0, prev - 1))}>
+              -
+            </button>
+          </div>
+          <div className="counter">
+            <button
+              className="counter-plus"
+              onClick={() => setPoison((prev) => prev + 1)}>
+              +
+            </button>
+            <span>Poison: {poison}</span>
+            <button
+              className="counter-minus"
+              onClick={() => setPoison((prev) => Math.max(0, prev - 1))}>
+              -
+            </button>
+          </div>
+          <div className="counter">
+            <span>Energy: {energy}</span>
+            <button
+              className="counter-plus"
+              onClick={() => setEnergy((prev) => prev + 1)}>
+              +
+            </button>
+            <button
+              className="counter-minus"
+              onClick={() => setEnergy((prev) => Math.max(0, prev - 1))}>
+              -
+            </button>
+          </div>
         </div>
-        <div className="counter">
-          <span>Poison: {poison}</span>
-          <button onClick={() => setPoison((prev) => prev + 1)}>+</button>
-          <button onClick={() => setPoison((prev) => Math.max(0, prev - 1))}>
-            -
-          </button>
-        </div>
-        <div className="counter">
-          <span>Energy: {energy}</span>
-          <button onClick={() => setEnergy((prev) => prev + 1)}>+</button>
-          <button onClick={() => setEnergy((prev) => Math.max(0, prev - 1))}>
-            -
-          </button>
-        </div>
-        <div className="counter">
-          <span>Commander Damage: {commanderDamage}</span>
-          <button onClick={() => handleCommanderDamage(1)}>+</button>
-          <button onClick={() => handleCommanderDamage(-1)}>-</button>
+        <div className="counters">
+          <div className="counter">
+            <span>Commander Damage: {commanderDamage}</span>
+            <button onClick={() => handleCommanderDamage(1)}>+</button>
+            <button onClick={() => handleCommanderDamage(-1)}>-</button>
+          </div>
         </div>
       </div>
     </div>
